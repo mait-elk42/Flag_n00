@@ -13,6 +13,8 @@ public class P_Small : MonoBehaviour
 	}
 	void Update()
 	{
+		if (Player_Movement.player_still_alive == false)
+			return ;
 		transform.position = Vector3.MoveTowards(transform.position, p_tr.position, 0.01f * speed);
 	}
 	void OnTriggerEnter2D(Collider2D col)
@@ -28,6 +30,7 @@ public class P_Small : MonoBehaviour
 			}
 			else
 			{
+				Player_Movement.health_value += 3;
 				Instantiate(die_effect, transform.position, Quaternion.identity);
 				Destroy(this.gameObject);
 			}

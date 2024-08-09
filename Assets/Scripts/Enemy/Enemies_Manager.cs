@@ -18,6 +18,8 @@ public class Enemies_Manager : MonoBehaviour
 
 	void Update()
 	{
+		if (Player_Movement.player_still_alive == false)
+			return ;
 		if (delay == 200)
 		{
 			int r = Random.Range(0, 999) % (transform.childCount - 1);

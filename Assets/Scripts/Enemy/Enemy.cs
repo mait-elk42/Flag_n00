@@ -18,6 +18,8 @@ public class Enemy : MonoBehaviour
 	}
 	void Update()
 	{
+		if (Player_Movement.player_still_alive == false)
+			return ;
 		transform.position = Vector3.MoveTowards(transform.position, p_tr.position, 0.01f * speed);
 		if (touch_player)
 		{
@@ -32,12 +34,11 @@ public class Enemy : MonoBehaviour
 			{
 				Player_Movement.cam_shake = true;
 				Instantiate(p_die_effect, transform.position, Quaternion.identity);
-				Player_Movement.score -= 55;
+				Player_Movement.health_value -= 2;
 				// Destroy(p_tr.gameObject);
 				optimize_effect = 0;
 			}
 		}
-		print(optimize_effect);
 		optimize_effect++;
 	}
 	void OnTriggerEnter2D(Collider2D col)
