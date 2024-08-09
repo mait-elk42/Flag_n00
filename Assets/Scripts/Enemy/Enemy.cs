@@ -28,17 +28,16 @@ public class Enemy : MonoBehaviour
 				Player_Movement.score += 99;
 				Destroy(this.gameObject);
 			}
-			else if (optimize_effect >= 100)
+			else if (optimize_effect % 100 == 0)
 			{
 				Player_Movement.cam_shake = true;
 				Instantiate(p_die_effect, transform.position, Quaternion.identity);
-				Player_Movement.score -= 99;
-				if (Player_Movement.score < 0)
-					Time.timeScale = 0;
+				Player_Movement.score -= 55;
 				// Destroy(p_tr.gameObject);
 				optimize_effect = 0;
 			}
 		}
+		print(optimize_effect);
 		optimize_effect++;
 	}
 	void OnTriggerEnter2D(Collider2D col)

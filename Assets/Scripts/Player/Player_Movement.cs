@@ -41,8 +41,8 @@ public class Player_Movement : MonoBehaviour
 		{
 			pos = cam.ScreenToWorldPoint(Input.mousePosition);
 		}
-		transform.position = Vector3.Lerp(transform.position , pos, 0.1f);;
-		walking = Vector3.Distance(transform.position, pos) > 1;
+		transform.position = Vector3.Lerp(transform.position , pos, 0.05f);;
+		walking = Vector3.Distance(transform.position, pos) > 0.5;
 		scorevalue.text = ""+score;
 		// if (walking)  print("Walking :" + walking);
 	}

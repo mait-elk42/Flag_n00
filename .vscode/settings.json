@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Flag_n00.sln"
+    "dotnet.defaultSolution": "Area_N50.sln"
 }
