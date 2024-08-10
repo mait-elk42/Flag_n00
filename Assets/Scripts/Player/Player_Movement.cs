@@ -1,7 +1,5 @@
-using System;
+using System.Collections;
 using TMPro;
-using UnityEditor.SearchService;
-using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -17,7 +15,7 @@ public class Player_Movement : MonoBehaviour
 	private int			angle;
 	[SerializeField]
 	private TextMeshProUGUI	scorevalue;
-	public static long		score;
+	public static int		score;
 	public static int	health_value;
 	public static bool	player_still_alive;
 	[SerializeField]
@@ -25,13 +23,30 @@ public class Player_Movement : MonoBehaviour
 	[SerializeField]
 	private	GameObject	Loser_Panel;
 	[SerializeField]
-	private	RectTransform rt;
+	private	RectTransform	rt;
+	[SerializeField]
+	private	TextMeshProUGUI	score_go;
 	private Vector3[]			mpoints = new Vector3[3];
 	private int					ms_points_index;
 	private Vector3				ms_dest;
+
+	private bool				show_panel;
+
+	[SerializeField]
+	private GameObject			pause_panel;
+
+
+	/**
+	*			REISZE THE PLAYER 
+	*			SCORE++ == SLOW INCR
+	*			ENEMIES DIFF SIZE
+	*			GLOW 
+	*			COMBO
+	**/
 	void Awake()
 	{
 		pos = transform.position;
+		score = 0;
 		health_value = 100;
 		player_still_alive = true;
 		ms_points_index = 0;
@@ -40,22 +55,62 @@ public class Player_Movement : MonoBehaviour
 		mpoints[2] = rt.transform.position + Vector3.down * 300;
 		ms_dest = rt.transform.position;
 		Loser_Panel.SetActive(false);
+		pause_panel.SetActive(false);
 	}
 	void Start()
 	{
-
+		show_panel = false;
+		Game_Gloabl_Data.show = true;
+		StartCoroutine(Game_Gloabl_Data.Wait_Before_Hide_LDNG());
 	}
 
 	void Update()
 	{
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			show_panel = show_panel == false;
+			Game_Gloabl_Data.game_started = false;
+		}
+		if (show_panel)
+		{
+			if (Input.GetKeyDown(KeyCode.C))
+			{
+				show_panel = false;
+				Game_Gloabl_Data.game_started = true;
+			}
+			if (Input.GetKeyDown(KeyCode.E))
+			{
+				Game_Gloabl_Data.Set_High_Score(score);
+				Game_Gloabl_Data.load_scene(0);
+			}
+			if (Input.GetKeyDown(KeyCode.Q))
+			{
+				Game_Gloabl_Data.Set_High_Score(score);
+				Application.Quit();
+			}
+			pause_panel.SetActive(show_panel);
+			return ;
+		}
+		if (Game_Gloabl_Data.game_started == false)
+			return ;
 		if (player_still_alive == false)
 		{
-			print("Player Died!");
 			if (Input.GetKeyDown(KeyCode.Return))
 			{
 				if (ms_points_index == 0)
 				{
-					SceneManager.LoadScene(0);
+					Game_Gloabl_Data.Set_High_Score(score);
+					Game_Gloabl_Data.load_scene(1);
+				}
+				else if (ms_points_index == 1)
+				{
+					Game_Gloabl_Data.Set_High_Score(score);
+					Game_Gloabl_Data.load_scene(0);
+				}
+				else if (ms_points_index == 2)
+				{
+					Game_Gloabl_Data.Set_High_Score(score);
+					Application.Quit();
 				}
 				print((ms_points_index == 0) ? "Retry" : (ms_points_index == 1) ? "Menu" : (ms_points_index == 2) ? "Exit" : "NOTHING");
 			}
@@ -78,6 +133,7 @@ public class Player_Movement : MonoBehaviour
 			rt.transform.position = Vector3.Lerp(rt.transform.position, ms_dest, 0.1f);
 			cam.transform.position = new Vector3(0, 0, cam.transform.position.z);
 			Loser_Panel.SetActive(true);
+			score_go.text = ""+score;
 			return ;
 		}
 		if (cam_shake)
@@ -105,6 +161,5 @@ public class Player_Movement : MonoBehaviour
 			cam_shake = true;
 			print("You Loose !");
 		}
-		// if (walking)  print("Walking :" + walking);
 	}
 }

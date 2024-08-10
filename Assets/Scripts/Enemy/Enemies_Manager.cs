@@ -18,14 +18,16 @@ public class Enemies_Manager : MonoBehaviour
 
 	void Update()
 	{
+		if (Game_Gloabl_Data.game_started == false)
+			return ;
 		if (Player_Movement.player_still_alive == false)
 			return ;
-		if (delay == 200)
+		if (delay == 100)
 		{
 			int r = Random.Range(0, 999) % (transform.childCount - 1);
 			if (GameObject.Find("/Player") == null)
 					return ;
-			if (Random.Range(0, 100) > 10)
+			if (Random.Range(0, 100) > 50)
 				Instantiate(enemy_model, positions[r].position, Quaternion.identity);
 			else
 				Instantiate(psmall_model, positions[r].position, Quaternion.identity);

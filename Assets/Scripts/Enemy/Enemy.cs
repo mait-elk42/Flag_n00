@@ -18,6 +18,8 @@ public class Enemy : MonoBehaviour
 	}
 	void Update()
 	{
+		if (Game_Gloabl_Data.game_started == false)
+			return ;
 		if (Player_Movement.player_still_alive == false)
 			return ;
 		transform.position = Vector3.MoveTowards(transform.position, p_tr.position, 0.01f * speed);

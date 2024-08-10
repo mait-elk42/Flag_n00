@@ -64,9 +64,13 @@
     <Analyzer Include="/goinfre/mait-elk/Unity/2022.3.40f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/MainMenu/Fade_Loading.cs" />
+    <Compile Include="Assets/Scripts/MainMenu/Menu_Manager.cs" />
+    <Compile Include="Assets/Scripts/MainMenu/Loading.cs" />
     <Compile Include="Assets/Scripts/Enemy/Enemy.cs" />
     <Compile Include="Assets/Scripts/Player/Player_Movement.cs" />
     <Compile Include="Assets/Scripts/Enemy/Enemies_Manager.cs" />
+    <Compile Include="Assets/Scripts/Global/Game_Gloabl_Data.cs" />
     <Compile Include="Assets/Scripts/Player/P_Small.c.cs" />
     <Compile Include="Assets/Scripts/Cus_Events/OEvents_Catch.cs" />
   </ItemGroup>
