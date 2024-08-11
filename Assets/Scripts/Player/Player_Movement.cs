@@ -1,7 +1,5 @@
-using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player_Movement : MonoBehaviour
@@ -12,7 +10,7 @@ public class Player_Movement : MonoBehaviour
 	public static bool	walking;
 	[SerializeField]
 	public static bool	cam_shake;
-	private int			angle;
+	private float			angle;
 	[SerializeField]
 	private TextMeshProUGUI	scorevalue;
 	public static int		score;
@@ -34,7 +32,8 @@ public class Player_Movement : MonoBehaviour
 
 	[SerializeField]
 	private GameObject			pause_panel;
-
+	[SerializeField]
+	private AudioSource	mv_seffect;
 
 	/**
 	*			REISZE THE PLAYER 
@@ -66,7 +65,7 @@ public class Player_Movement : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetKeyDown(KeyCode.Escape) && player_still_alive)
 		{
 			show_panel = show_panel == false;
 			Game_Gloabl_Data.game_started = false;
@@ -112,7 +111,6 @@ public class Player_Movement : MonoBehaviour
 					Game_Gloabl_Data.Set_High_Score(score);
 					Application.Quit();
 				}
-				print((ms_points_index == 0) ? "Retry" : (ms_points_index == 1) ? "Menu" : (ms_points_index == 2) ? "Exit" : "NOTHING");
 			}
 			if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.UpArrow))
 			{
@@ -138,8 +136,8 @@ public class Player_Movement : MonoBehaviour
 		}
 		if (cam_shake)
 		{
-			cam.transform.position = new Vector3(cam.transform.position.x + (Mathf.Cos(angle) * 0.5f), cam.transform.position.y+ (Mathf.Sin(angle) * 0.5f), cam.transform.position.z);
-			angle+=10;
+			cam.transform.position = new Vector3(cam.transform.position.x + (Mathf.Cos(angle) * 0.15f), cam.transform.position.y+ (Mathf.Sin(angle) * 0.15f), cam.transform.position.z);
+			angle += Time.deltaTime * 800f;
 			if (angle > 360)
 			{
 				angle = 0;
@@ -149,9 +147,10 @@ public class Player_Movement : MonoBehaviour
 		}
 		if (Input.GetMouseButtonDown(0))
 		{
+			mv_seffect.Play();
 			pos = cam.ScreenToWorldPoint(Input.mousePosition);
 		}
-		transform.position = Vector3.Lerp(transform.position , pos, 0.05f);;
+		transform.position = Vector3.Lerp(transform.position , pos, 0.01f * Time.deltaTime * Game_Gloabl_Data.player_speed);;
 		walking = Vector3.Distance(transform.position, pos) > 0.5;
 		scorevalue.text = ""+score;
 		health.value = health_value;
@@ -159,7 +158,6 @@ public class Player_Movement : MonoBehaviour
 		{
 			player_still_alive = false;
 			cam_shake = true;
-			print("You Loose !");
 		}
 	}
 }

@@ -2,6 +2,15 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum Enemy_Type
+{
+	NORMAL,
+	BOSS1,
+	BOSS2,
+	BOSS3,
+	BOSS4,
+}
+
 public class Game_Gloabl_Data
 {
 	public static bool			can_switch;
@@ -9,6 +18,8 @@ public class Game_Gloabl_Data
 	public static bool			game_started;
 	public static int			loading_opacity = 0;
 	public static int			loading_opacity_incv = 1;
+	public static int			player_speed = 1200;
+	public static int			enemy_speed = 700;
 
 	public static void	load_scene(int index)
 	{
@@ -20,7 +31,7 @@ public class Game_Gloabl_Data
 	public static IEnumerator Wait_Before_Hide_LDNG()
 	{
 		game_started = false;
-		yield return new WaitForSeconds(3);
+		yield return new WaitForSeconds(5);
 		show = false;
 		game_started = true;
 	}
