@@ -7,6 +7,10 @@ public class P_Small : MonoBehaviour
 	public Transform	p_tr;
 	[SerializeField]
 	private GameObject	die_effect;
+	[SerializeField]
+	private	GameObject	seff;
+	[SerializeField]
+	private	GameObject	hseff;
 	void Start()
 	{
 		p_tr = GameObject.Find("/Player").transform;
@@ -27,6 +31,7 @@ public class P_Small : MonoBehaviour
 		{
 			if (Player_Movement.walking == true)
 			{
+				Instantiate(seff, transform.position, Quaternion.identity);
 				Player_Movement.cam_shake = true;
 				Instantiate(die_effect, transform.position, Quaternion.identity);
 				Player_Movement.score -= 50;
@@ -35,7 +40,10 @@ public class P_Small : MonoBehaviour
 			else
 			{
 				if (Player_Movement.health_value < 100)
-					Player_Movement.health_value += 3;
+				{
+					Instantiate(hseff, transform.position, Quaternion.identity);
+					Player_Movement.health_value += 10;
+				}
 				Instantiate(die_effect, transform.position, Quaternion.identity);
 				Destroy(this.gameObject);
 			}

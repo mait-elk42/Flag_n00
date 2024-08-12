@@ -49,6 +49,8 @@ MonoBehaviour:
   p_tr: {fileID: 0}
   die_effect: {fileID: 8240929214738419235, guid: 310c524a5c78d4757802a97d8ed4a069, type: 3}
   p_die_effect: {fileID: 8770608086392405906, guid: 594953bf9a4bc4cf2b4c1a844ed72e95, type: 3}
+  type: 0
+  seff: {fileID: 4637173585100987397, guid: b1242c34040cf46aa84aae983c199bfc, type: 3}
 --- !u!60 &3546606250262383758
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -253,7 +255,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
   m_FlipX: 0
@@ -337,7 +339,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
   m_FlipX: 0

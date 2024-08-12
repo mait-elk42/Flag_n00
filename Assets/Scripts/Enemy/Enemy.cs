@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
 	private int			health_damage = 2;
 	private int			score_gift = 50;
 	public Enemy_Type	type = Enemy_Type.NORMAL;
+	[SerializeField]
+	private	GameObject	seff;
 	void Start()
 	{
 		p_tr = GameObject.Find("/Player").transform;
@@ -54,6 +56,7 @@ public class Enemy : MonoBehaviour
 		{
 			if (Player_Movement.walking == true)
 			{
+				Instantiate(seff, transform.position, Quaternion.identity);
 				Game_Gloabl_Data.enemy_speed += 5;
 				Game_Gloabl_Data.player_speed += 5;
 				Player_Movement.cam_shake = true;
@@ -63,6 +66,7 @@ public class Enemy : MonoBehaviour
 			}
 			else
 			{
+				Instantiate(seff, transform.position, Quaternion.identity);
 				Player_Movement.cam_shake = true;
 				Instantiate(p_die_effect, p_tr.transform.position, Quaternion.identity);
 				Player_Movement.health_value -= health_damage;

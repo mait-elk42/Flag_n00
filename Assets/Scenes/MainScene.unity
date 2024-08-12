@@ -1972,6 +1972,7 @@ MonoBehaviour:
   score_go: {fileID: 148763693}
   pause_panel: {fileID: 89209459}
   mv_seffect: {fileID: 414756771}
+  loose_seff: {fileID: 4508101465639599053, guid: 79d46491119904e088e12ea24b81dadf, type: 3}
 --- !u!61 &471076791
 BoxCollider2D:
   m_ObjectHideFlags: 0

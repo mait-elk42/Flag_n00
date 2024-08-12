@@ -134,6 +134,7 @@ MonoBehaviour:
   die_effect: {fileID: 8240929214738419235, guid: 310c524a5c78d4757802a97d8ed4a069, type: 3}
   p_die_effect: {fileID: 8770608086392405906, guid: 594953bf9a4bc4cf2b4c1a844ed72e95, type: 3}
   type: 0
+  seff: {fileID: 4637173585100987397, guid: b1242c34040cf46aa84aae983c199bfc, type: 3}
 --- !u!60 &8189977364725057045
 PolygonCollider2D:
   m_ObjectHideFlags: 0

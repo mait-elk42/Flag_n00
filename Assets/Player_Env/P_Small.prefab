@@ -149,3 +149,5 @@ MonoBehaviour:
   speed: 2
   p_tr: {fileID: 0}
   die_effect: {fileID: 8770608086392405906, guid: 594953bf9a4bc4cf2b4c1a844ed72e95, type: 3}
+  seff: {fileID: 4637173585100987397, guid: b1242c34040cf46aa84aae983c199bfc, type: 3}
+  hseff: {fileID: 5733714193476206553, guid: 7604bf852633f432191bc4e15f5ed5ab, type: 3}

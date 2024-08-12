@@ -35,6 +35,9 @@ public class Player_Movement : MonoBehaviour
 	[SerializeField]
 	private AudioSource	mv_seffect;
 
+	[SerializeField]
+	private	GameObject	loose_seff;
+
 	/**
 	*			REISZE THE PLAYER 
 	*			SCORE++ == SLOW INCR
@@ -156,6 +159,7 @@ public class Player_Movement : MonoBehaviour
 		health.value = health_value;
 		if (health_value <= 0)
 		{
+			Instantiate(loose_seff, transform.position, Quaternion.identity);
 			player_still_alive = false;
 			cam_shake = true;
 		}
