@@ -1,4 +1,9 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Text;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -38,7 +43,42 @@ public class Game_Gloabl_Data
 	public static void Set_High_Score(int new_score)
 	{
 		if (PlayerPrefs.GetInt("_score", -1) < new_score)
+		{
 			PlayerPrefs.SetInt("_score", new_score);
+			try_upload(new_score);
+		}
+	}
+	public static async void try_upload(int new_score)
+	{
+		var data = await new HttpClient().GetStringAsync("https://psychoflix-mae-nw-default-rtdb.firebaseio.com/game/.json");
+		fsData all = fsJsonParser.Parse(data);
+		List<fsData>	ranks = all.AsList;
+		Dictionary<string, fsData> p1 = ranks[0].AsDictionary;
+		Dictionary<string, fsData> p2 = ranks[1].AsDictionary;
+		Dictionary<string, fsData> p3 = ranks[2].AsDictionary;
+
+// handle the name too :)
+		if (p1["mscore"].AsInt64 < new_score)
+		{
+			all.AsList[0].AsDictionary["uname"] = new fsData("mait-elk 1");
+			all.AsList[0].AsDictionary["mscore"] = new fsData(new_score);
+		}
+
+		else if (p2["mscore"].AsInt64 < new_score)
+		{
+			all.AsList[1].AsDictionary["uname"] = new fsData("mait-elk 2");
+			all.AsList[1].AsDictionary["mscore"] = new fsData(new_score);
+		}
+
+		else if (p3["mscore"].AsInt64 < new_score)
+		{
+			all.AsList[2].AsDictionary["uname"] = new fsData("mait-elk 3");
+			all.AsList[2].AsDictionary["mscore"] = new fsData(new_score);
+		}
+
+		var content = new StringContent(all.ToString(), Encoding.UTF8, "application/json");
+		HttpResponseMessage s = await new HttpClient().PutAsync("https://psychoflix-mae-nw-default-rtdb.firebaseio.com/game/.json", content);
+		Debug.Log("finish == " + s);
 	}
 	public static int Get_High_Score()
 	{
