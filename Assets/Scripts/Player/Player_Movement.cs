@@ -5,31 +5,29 @@ using UnityEngine.UI;
 public class Player_Movement : MonoBehaviour
 {
 	[SerializeField]
-	Camera				cam;
-	private Vector2		pos;
-	public static bool	walking;
+	Camera						cam;
+	private Vector2				pos;
+	public static bool			walking;
 	[SerializeField]
-	public static bool	cam_shake;
-	private float			angle;
+	public static bool			cam_shake;
+	private float				angle;
 	[SerializeField]
-	private TextMeshProUGUI	scorevalue;
-	public static int		score;
-	public static int	health_value;
-	public static bool	player_still_alive;
+	private TextMeshProUGUI		scorevalue;
+	public static int			score;
+	public static int			health_value;
+	public static bool			player_still_alive;
 	[SerializeField]
-	private Slider	health;
+	private Slider				health;
 	[SerializeField]
-	private	GameObject	Loser_Panel;
+	private	GameObject			Loser_Panel;
 	[SerializeField]
-	private	RectTransform	rt;
+	private	RectTransform		rt;
 	[SerializeField]
-	private	TextMeshProUGUI	score_go;
+	private	TextMeshProUGUI		score_go;
 	private Vector3[]			mpoints = new Vector3[3];
 	private int					ms_points_index;
 	private Vector3				ms_dest;
-
 	private bool				show_panel;
-
 	[SerializeField]
 	private GameObject			pause_panel;
 	[SerializeField]
@@ -38,13 +36,14 @@ public class Player_Movement : MonoBehaviour
 	[SerializeField]
 	private	GameObject	loose_seff;
 
-	/**
+	/*
 	*			REISZE THE PLAYER 
 	*			SCORE++ == SLOW INCR
 	*			ENEMIES DIFF SIZE
 	*			GLOW 
 	*			COMBO
-	**/
+	*/
+	
 	void Awake()
 	{
 		pos = transform.position;

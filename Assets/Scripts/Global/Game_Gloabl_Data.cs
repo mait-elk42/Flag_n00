@@ -45,7 +45,7 @@ public class Game_Gloabl_Data
 		if (PlayerPrefs.GetInt("_score", -1) < new_score)
 		{
 			PlayerPrefs.SetInt("_score", new_score);
-			try_upload(new_score);
+			// try_upload(new_score);
 		}
 	}
 	public static async void try_upload(int new_score)
@@ -60,19 +60,19 @@ public class Game_Gloabl_Data
 // handle the name too :)
 		if (p1["mscore"].AsInt64 < new_score)
 		{
-			all.AsList[0].AsDictionary["uname"] = new fsData("mait-elk 1");
+			all.AsList[0].AsDictionary["uname"] = new fsData(Get_Uname());
 			all.AsList[0].AsDictionary["mscore"] = new fsData(new_score);
 		}
 
 		else if (p2["mscore"].AsInt64 < new_score)
 		{
-			all.AsList[1].AsDictionary["uname"] = new fsData("mait-elk 2");
+			all.AsList[1].AsDictionary["uname"] = new fsData(Get_Uname());
 			all.AsList[1].AsDictionary["mscore"] = new fsData(new_score);
 		}
 
 		else if (p3["mscore"].AsInt64 < new_score)
 		{
-			all.AsList[2].AsDictionary["uname"] = new fsData("mait-elk 3");
+			all.AsList[2].AsDictionary["uname"] = new fsData(Get_Uname());
 			all.AsList[2].AsDictionary["mscore"] = new fsData(new_score);
 		}
 
@@ -83,5 +83,9 @@ public class Game_Gloabl_Data
 	public static int Get_High_Score()
 	{
 		return PlayerPrefs.GetInt("_score", -1);
+	}
+	public static String Get_Uname()
+	{
+		return PlayerPrefs.GetString("_uname", "You");
 	}
 }

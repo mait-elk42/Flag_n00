@@ -1,4 +1,3 @@
-using System.IO;
 using TMPro;
 using UnityEngine;
 using System.Net.Http;
@@ -19,22 +18,29 @@ public class Menu_Manager : MonoBehaviour
 	private	TextMeshProUGUI[]	hs_scores = new TextMeshProUGUI[3];
 	private bool		load_board_visibility;
 
+
 	[SerializeField]
-	private TextMeshProUGUI	score_t;
+	private GameObject	Uname_panel;
+
+
+	[SerializeField]
+	private GameObject	my_hs;
 	void Awake()
 	{
+		// PlayerPrefs.SetInt("_score", 0);
 		if (Game_Gloabl_Data.can_switch)
 			StartCoroutine(Game_Gloabl_Data.Wait_Before_Hide_LDNG());
 		else
 			Game_Gloabl_Data.game_started = true;
-		score_t.text = ""+Game_Gloabl_Data.Get_High_Score();
+		my_hs.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = ""+Game_Gloabl_Data.Get_Uname();
+		my_hs.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = ""+Game_Gloabl_Data.Get_High_Score();
 	}
 
 	void Start()
 	{
-		Game_Gloabl_Data.Set_High_Score(5000);
 		hs_panel.SetActive(false);
 		hs_panel_wait.SetActive(false);
+		Uname_panel.SetActive(!Game_Gloabl_Data.can_switch && !PlayerPrefs.HasKey("_uname"));
 	}
 	void Update()
 	{
@@ -66,20 +72,20 @@ public class Menu_Manager : MonoBehaviour
 			var data = await new HttpClient().GetStringAsync("https://psychoflix-mae-nw-default-rtdb.firebaseio.com/game/.json");
 			fsData all = fsJsonParser.Parse(data);
 			List<fsData>	ranks = all.AsList;
-			hs_names[0].text = ranks[0].AsDictionary["uname"].ToString().Replace("\"", "");
-			hs_scores[0].text = ranks[0].AsDictionary["mscore"].ToString().Replace("\"", "");
+			hs_names[0].text = ranks[0].AsDictionary["uname"].AsString;
+			hs_scores[0].text = ranks[0].AsDictionary["mscore"].AsInt64+"";
 
-			hs_names[1].text = ranks[1].AsDictionary["uname"].ToString().Replace("\"", "");
-			hs_scores[1].text = ranks[1].AsDictionary["mscore"].ToString().Replace("\"", "");
+			hs_names[1].text = ranks[1].AsDictionary["uname"].AsString;
+			hs_scores[1].text = ranks[1].AsDictionary["mscore"].AsInt64+"";
 
-			hs_names[2].text = ranks[2].AsDictionary["uname"].ToString().Replace("\"", "");
-			hs_scores[2].text = ranks[2].AsDictionary["mscore"].ToString().Replace("\"", "");
+			hs_names[2].text = ranks[2].AsDictionary["uname"].AsString;
+			hs_scores[2].text = ranks[2].AsDictionary["mscore"].AsInt64+"";
 
-			Debug.Log("completed :) " + Time.deltaTime);
+			print("completed :) " + Time.deltaTime);
 			hs_panel_wait.SetActive(false);
 		}catch (Exception e)
 		{
-			Debug.Log("Error :(" + e.Message);
+			print("Error :(" + e.Message);
 			t.text = "Ooops! Cannot Load :(";
 			t.color = Color.red;
 		}
@@ -92,5 +98,14 @@ public class Menu_Manager : MonoBehaviour
 	public void	ExitGame()
 	{
 		Application.Quit();
+	}
+	public void save_uname(TextMeshProUGUI t)
+	{
+		print(">> [" + t.text + "]:" + t.text.Length);
+		if (t.text.Length <= 1)
+			return ;
+		Uname_panel.SetActive(false);
+		PlayerPrefs.SetString("_uname", t.text);
+		Awake();
 	}
 }
