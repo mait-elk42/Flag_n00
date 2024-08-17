@@ -22,7 +22,7 @@ AssetImportWorker1
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-51826
+52952
 Successfully changed project path to: /goinfre/mait-elk/Flag_n00
 /goinfre/mait-elk/Flag_n00
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -56,14 +56,14 @@ Successfully changed project path to: /goinfre/mait-elk/Flag_n00
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [4529962432]  Target information:
+Player connection [4640357824]  Target information:
 
-Player connection [4529962432]  * "[IP] 10.13.1.3 [Port] 0 [Flags] 2 [Guid] 1914328481 [EditorId] 1914328481 [Version] 1048832 [Id] OSXEditor(0,e3r1p3.1337.ma) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+Player connection [4640357824]  * "[IP] 10.13.1.3 [Port] 0 [Flags] 2 [Guid] 2042970284 [EditorId] 2042970284 [Version] 1048832 [Id] OSXEditor(0,e3r1p3.1337.ma) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
 
-Player connection [4529962432] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [4529962432] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [4640357824] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [4640357824] Host joined alternative multi-casting on [225.0.0.222:34997]...
 [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-Refreshing native plugins compatible for Editor in 12.02 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 17.04 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.40f1 (cbdda657d2f0)
 [Subsystems] Discovering subsystems at path /goinfre/mait-elk/Unity/2022.3.40f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -78,51 +78,51 @@ Initialize mono
 Mono path[0] = '/goinfre/mait-elk/Unity/2022.3.40f1/Unity.app/Contents/Managed'
 Mono path[1] = '/goinfre/mait-elk/Unity/2022.3.40f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/goinfre/mait-elk/Unity/2022.3.40f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56285
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56253
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /goinfre/mait-elk/Unity/2022.3.40f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /goinfre/mait-elk/Unity/2022.3.40f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: /goinfre/mait-elk/Unity/2022.3.40f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: /goinfre/mait-elk/Unity/2022.3.40f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004478 seconds.
-- Loaded All Assemblies, in  0.567 seconds
+Registered in 0.005724 seconds.
+- Loaded All Assemblies, in  0.462 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 71 ms
+Android Extension - Scanning For ADB Devices 83 ms
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.609 seconds
-Domain Reload Profiling: 1176ms
-	BeginReloadAssembly (189ms)
+- Finished resetting the current domain, in  0.499 seconds
+Domain Reload Profiling: 960ms
+	BeginReloadAssembly (141ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (62ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (62ms)
-	LoadAllAssembliesAndSetupDomain (240ms)
-		LoadAssemblies (193ms)
+	RebuildCommonClasses (44ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (61ms)
+	LoadAllAssembliesAndSetupDomain (202ms)
+		LoadAssemblies (143ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (234ms)
-			TypeCache.Refresh (202ms)
-				TypeCache.ScanAssembly (175ms)
-			ScanForSourceGeneratedMonoScriptInfo (3ms)
-			ResolveRequiredComponents (20ms)
-	FinalizeReload (610ms)
+		AnalyzeDomain (198ms)
+			TypeCache.Refresh (196ms)
+				TypeCache.ScanAssembly (179ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (499ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (486ms)
+		SetupLoadedEditorAssemblies (447ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (308ms)
+			InitializePlatformSupportModulesInManaged (258ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (124ms)
-			ProcessInitializeOnLoadMethodAttributes (47ms)
+			ProcessInitializeOnLoadAttributes (137ms)
+			ProcessInitializeOnLoadMethodAttributes (45ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -131,7 +131,7 @@ Domain Reload Profiling: 1176ms
 Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.942 seconds
+- Loaded All Assemblies, in  1.082 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
@@ -141,48 +141,48 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.014 seconds
-Domain Reload Profiling: 1957ms
-	BeginReloadAssembly (154ms)
+- Finished resetting the current domain, in  1.274 seconds
+Domain Reload Profiling: 2357ms
+	BeginReloadAssembly (186ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (8ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (40ms)
-	RebuildCommonClasses (43ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (42ms)
-	LoadAllAssembliesAndSetupDomain (691ms)
-		LoadAssemblies (421ms)
+		CreateAndSetChildDomain (55ms)
+	RebuildCommonClasses (49ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (55ms)
+	LoadAllAssembliesAndSetupDomain (778ms)
+		LoadAssemblies (483ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (337ms)
-			TypeCache.Refresh (284ms)
-				TypeCache.ScanAssembly (228ms)
-			ScanForSourceGeneratedMonoScriptInfo (35ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (1014ms)
+		AnalyzeDomain (368ms)
+			TypeCache.Refresh (306ms)
+				TypeCache.ScanAssembly (281ms)
+			ScanForSourceGeneratedMonoScriptInfo (37ms)
+			ResolveRequiredComponents (19ms)
+	FinalizeReload (1274ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (712ms)
+		SetupLoadedEditorAssemblies (974ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (28ms)
+			InitializePlatformSupportModulesInManaged (29ms)
 			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (79ms)
-			ProcessInitializeOnLoadAttributes (521ms)
-			ProcessInitializeOnLoadMethodAttributes (76ms)
+			BeforeProcessingInitializeOnLoad (104ms)
+			ProcessInitializeOnLoadAttributes (729ms)
+			ProcessInitializeOnLoadMethodAttributes (104ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (4ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
 Launching external process: /goinfre/mait-elk/Unity/2022.3.40f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
-Refreshing native plugins compatible for Editor in 1.48 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.03 seconds
+Refreshing native plugins compatible for Editor in 1.65 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5690 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 34 unused Assets / (376.8 KB). Loaded Objects now: 6163.
-Memory consumption went from 360.5 MB to 360.1 MB.
-Total: 5.261438 ms (FindLiveObjects: 0.567411 ms CreateObjectMapping: 0.588626 ms MarkObjects: 3.807857 ms  DeleteObjects: 0.296851 ms)
+Unloading 34 unused Assets / (92.7 KB). Loaded Objects now: 6163.
+Memory consumption went from 360.4 MB to 360.3 MB.
+Total: 8.350287 ms (FindLiveObjects: 0.779125 ms CreateObjectMapping: 0.844603 ms MarkObjects: 6.398951 ms  DeleteObjects: 0.326412 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -199,452 +199,64 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 12306.413613 seconds.
-  path: Assets/Enemy_Env/Enemy_Boss1.prefab
-  artifactKey: Guid(c81a75079457c4b7f851ddafc9873d21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemy_Env/Enemy_Boss1.prefab using Guid(c81a75079457c4b7f851ddafc9873d21) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: 'c1043be0a2940393ea6c8f358308c275') in 0.258281 seconds
+  Time since last request: 15431.639350 seconds.
+  path: Assets/Scripts/Player/Player_Movement.cs
+  artifactKey: Guid(0685fd719fab447cb9aa4c789a0e7c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Player_Movement.cs using Guid(0685fd719fab447cb9aa4c789a0e7c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '6efc68168b1040abfb4715d3c00db8db') in 0.001847 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 53
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000066 seconds.
-  path: Assets/Enemy_Env/Enemy_Boss4.prefab
-  artifactKey: Guid(7ebeb0386bad94b189f1520a33de4162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemy_Env/Enemy_Boss4.prefab using Guid(7ebeb0386bad94b189f1520a33de4162) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+  Time since last request: 120.833631 seconds.
+  path: Assets/Textures/go.png
+  artifactKey: Guid(fc41de6231d964fceae8a66868c2d13a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/go.png using Guid(fc41de6231d964fceae8a66868c2d13a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '0d3dddc8cdbf566f3dae01bfb3a2af39') in 0.010293 seconds
+ -> (artifact id: '649e209a1900f76ad4435aa78f97e806') in 0.181986 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 52
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 8.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 4 unused Assets / (43.6 KB). Loaded Objects now: 6252.
-Memory consumption went from 241.5 MB to 241.5 MB.
-Total: 22.614588 ms (FindLiveObjects: 1.137143 ms CreateObjectMapping: 0.532118 ms MarkObjects: 20.759615 ms  DeleteObjects: 0.184177 ms)
-
-Prepare: number of updated asset objects reloaded= 119
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
-  custom:framework-osx-AVFoundation: b23960f63f64bdc6ff669e2cdcee2391 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 3 unused Assets / (42.7 KB). Loaded Objects now: 6252.
-Memory consumption went from 241.5 MB to 241.4 MB.
-Total: 7.233049 ms (FindLiveObjects: 0.489767 ms CreateObjectMapping: 0.422027 ms MarkObjects: 6.212451 ms  DeleteObjects: 0.107878 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
-  custom:framework-osx-AVFoundation: b23960f63f64bdc6ff669e2cdcee2391 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 21.155583 seconds.
-  path: Assets/Enemy_Env/Enemy.prefab
-  artifactKey: Guid(86d68384f03e346788c8889cbdd3c636) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemy_Env/Enemy.prefab using Guid(86d68384f03e346788c8889cbdd3c636) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+  Time since last request: 0.000109 seconds.
+  path: Assets/Textures/Mouse.png
+  artifactKey: Guid(e132a60e7267c4da5bec6fb83310fa51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Mouse.png using Guid(e132a60e7267c4da5bec6fb83310fa51) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-State comes from an incompatible keyword space
-Expected: From shader: 'Hidden/Universal/CoreBlit' Keyword count: 9 Keywords: STEREO_INSTANCING_ON UNITY_SINGLE_PASS_STEREO STEREO_MULTIVIEW_ON STEREO_CUBEMAP_RENDER_ON DISABLE_TEXTURE2D_X_ARRAY BLIT_SINGLE_SLICE BLIT_DECODE_HDR _LINEAR_TO_SRGB_CONVERSION DEBUG_DISPLAY
-Actual: From shader: 'Hidden/InternalErrorShader' Keyword count: 7 Keywords: STEREO_INSTANCING_ON UNITY_SINGLE_PASS_STEREO STEREO_MULTIVIEW_ON STEREO_CUBEMAP_RENDER_ON FOG_LINEAR FOG_EXP FOG_EXP2
- #0 GetStacktrace(int)
- #1 DebugStringToFile(DebugStringToFileData const&)
- #2 AssertImplementation(int, char const*, int, int, char const*)
- #3 keywords::LocalKeywordState::ValidateSpace(keywords::LocalSpace const*) const
- #4 Material::ResetKeywords(keywords::LocalKeywordState const&)
- #5 MaterialScripting::SetEnabledKeywords(Material*, core::vector<LocalKeywordInfo, 0ul> const&)
- #6 Material_CUSTOM_SetEnabledKeywords(ScriptingBackendNativeObjectPtrOpaque*, ScriptingBackendNativeArrayPtrOpaque*)
- #7  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Material:SetEnabledKeywords (UnityEngine.Material,UnityEngine.Rendering.LocalKeyword[])
- #8  (Mono JIT Code) [ScriptableRenderer.cs:1508] UnityEngine.Rendering.Universal.ScriptableRenderer:ExecuteRenderPass (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.ScriptableRenderPass,UnityEngine.Rendering.Universal.RenderingData&)
- #9  (Mono JIT Code) [ScriptableRenderer.cs:1460] UnityEngine.Rendering.Universal.ScriptableRenderer:ExecuteBlock (int,UnityEngine.Rendering.Universal.ScriptableRenderer/RenderBlocks&,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.RenderingData&,bool)
- #10  (Mono JIT Code) [ScriptableRenderer.cs:1249] UnityEngine.Rendering.Universal.ScriptableRenderer:Execute (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.RenderingData&)
- #11  (Mono JIT Code) [UniversalRenderPipeline.cs:692] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData&)
- #12  (Mono JIT Code) [UniversalRenderPipeline.cs:576] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera,UnityEngine.Rendering.Universal.UniversalAdditionalCameraData&)
- #13  (Mono JIT Code) [UniversalRenderPipeline.cs:559] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera)
- #14  (Mono JIT Code) [UniversalRenderPipeline.cs:386] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
- #15  (Mono JIT Code) [RenderPipeline.cs:53] UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
- #16  (Mono JIT Code) [RenderPipelineManager.cs:132] UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,UnityEngine.Object,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
- #17  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
- #18 mono_jit_runtime_invoke
- #19 do_runtime_invoke
- #20 mono_runtime_invoke
- #21 scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool)
- #22 ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool)
- #23 ScriptableRenderContext::ExtractAndExecuteRenderPipeline(core::vector<Camera*, 0ul> const&, void (*)(SceneNode const*, AABB const*, IndexList&, SceneCullingParameters const*), void*, ScriptingObjectPtr)
- #24 Camera::CustomRenderWithPipeline(ShaderPassContext&, Camera::RenderFlag, void (*)(SceneNode const*, AABB const*, IndexList&, SceneCullingParameters const*), void*, ScriptingObjectPtr)
- #25 Camera::StandaloneCustomRender(Camera::RenderFlag, Shader*, core::basic_string<char, core::StringStorageDefault<char> > const&, Camera::PerformRenderFunction*, ScriptingObjectPtr)
- #26 CameraScripting::Render(Camera*)
- #27 Camera_CUSTOM_Render(ScriptingBackendNativeObjectPtrOpaque*)
- #28  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
-
-State comes from an incompatible keyword space
-Expected: From shader: 'Hidden/InternalErrorShader' Keyword count: 7 Keywords: STEREO_INSTANCING_ON UNITY_SINGLE_PASS_STEREO STEREO_MULTIVIEW_ON STEREO_CUBEMAP_RENDER_ON FOG_LINEAR FOG_EXP FOG_EXP2
-Actual: From shader: 'Hidden/Universal/CoreBlit' Keyword count: 9 Keywords: STEREO_INSTANCING_ON UNITY_SINGLE_PASS_STEREO STEREO_MULTIVIEW_ON STEREO_CUBEMAP_RENDER_ON DISABLE_TEXTURE2D_X_ARRAY BLIT_SINGLE_SLICE BLIT_DECODE_HDR _LINEAR_TO_SRGB_CONVERSION DEBUG_DISPLAY
- #0 GetStacktrace(int)
- #1 DebugStringToFile(DebugStringToFileData const&)
- #2 AssertImplementation(int, char const*, int, int, char const*)
- #3 keywords::LocalKeywordState::ValidateSpace(keywords::LocalSpace const*) const
- #4 keywords::LocalKeywordState::Union(keywords::LocalKeywordState const&)
- #5 Shader::ResolveLocalState(keywords::GlobalKeywordState const&, keywords::LocalKeywordState const&) const
- #6 RenderingCommandBuffer::ExecuteCommandBufferWithState(ShaderPassContext&, RenderNodeQueue&, RenderingCommandBufferState*, unsigned int, ComputeQueueType) const
- #7 RenderingCommandBuffer::ExecuteCommandBuffer(ShaderPassContext&, RenderNodeQueue&, unsigned int, core::vector<std::__1::pair<ShaderLab::FastPropertyName, RenderTexture*>, 0ul>*, ComputeQueueType, RenderTexture*) const
- #8 ScriptableRenderContext::ExecuteScriptableRenderLoop()
- #9  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal_Injected (UnityEngine.Rendering.ScriptableRenderContext&)
- #10  (Mono JIT Code) [UniversalRenderPipeline.cs:576] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera,UnityEngine.Rendering.Universal.UniversalAdditionalCameraData&)
- #11  (Mono JIT Code) [UniversalRenderPipeline.cs:559] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera)
- #12  (Mono JIT Code) [UniversalRenderPipeline.cs:386] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
- #13  (Mono JIT Code) [RenderPipeline.cs:53] UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
- #14  (Mono JIT Code) [RenderPipelineManager.cs:132] UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,UnityEngine.Object,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
- #15  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
- #16 mono_jit_runtime_invoke
- #17 do_runtime_invoke
- #18 mono_runtime_invoke
- #19 scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool)
- #20 ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool)
- #21 ScriptableRenderContext::ExtractAndExecuteRenderPipeline(core::vector<Camera*, 0ul> const&, void (*)(SceneNode const*, AABB const*, IndexList&, SceneCullingParameters const*), void*, ScriptingObjectPtr)
- #22 Camera::CustomRenderWithPipeline(ShaderPassContext&, Camera::RenderFlag, void (*)(SceneNode const*, AABB const*, IndexList&, SceneCullingParameters const*), void*, ScriptingObjectPtr)
- #23 Camera::StandaloneCustomRender(Camera::RenderFlag, Shader*, core::basic_string<char, core::StringStorageDefault<char> > const&, Camera::PerformRenderFunction*, ScriptingObjectPtr)
- #24 CameraScripting::Render(Camera*)
- #25 Camera_CUSTOM_Render(ScriptingBackendNativeObjectPtrOpaque*)
- #26  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
-
-Incompatible keyword states
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
-UnityEngine.Rendering.ScriptableRenderContext:Submit () (at /Users/bokken/build/output/unity/unity/Runtime/Export/RenderPipeline/ScriptableRenderContext.cs:117)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData&) (at ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs:705)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera,UnityEngine.Rendering.Universal.UniversalAdditionalCameraData&) (at ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs:575)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs:558)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs:384)
-UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at /Users/bokken/build/output/unity/unity/Runtime/Export/RenderPipeline/RenderPipeline.cs:52)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,UnityEngine.Object,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle) (at /Users/bokken/build/output/unity/unity/Runtime/Export/RenderPipeline/RenderPipelineManager.cs:132)
-UnityEditor.PreviewRenderUtility:Render (bool,bool) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Inspector/PreviewRenderUtility.cs:539)
-UnityEditor.GameObjectInspector:DoRenderPreview (UnityEditor.GameObjectInspector/PreviewData) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Inspector/GameObjectInspector.cs:1155)
-UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Inspector/GameObjectInspector.cs:1169)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int) (at /Users/bokken/build/output/unity/unity/Editor/Mono/AssetPreviewUpdater.cs:43)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string) (at /Users/bokken/build/output/unity/unity/Editor/Mono/AssetPreviewUpdater.cs:11)
-
-[/Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs line 37]
-
-RenderingCommandBuffer: shader Hidden/InternalErrorShader: invalid pass index 23 in DrawProcedural
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
-UnityEngine.Rendering.ScriptableRenderContext:Submit () (at /Users/bokken/build/output/unity/unity/Runtime/Export/RenderPipeline/ScriptableRenderContext.cs:117)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData&) (at ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs:705)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera,UnityEngine.Rendering.Universal.UniversalAdditionalCameraData&) (at ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs:575)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs:558)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs:384)
-UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at /Users/bokken/build/output/unity/unity/Runtime/Export/RenderPipeline/RenderPipeline.cs:52)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,UnityEngine.Object,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle) (at /Users/bokken/build/output/unity/unity/Runtime/Export/RenderPipeline/RenderPipelineManager.cs:132)
-UnityEditor.PreviewRenderUtility:Render (bool,bool) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Inspector/PreviewRenderUtility.cs:539)
-UnityEditor.GameObjectInspector:DoRenderPreview (UnityEditor.GameObjectInspector/PreviewData) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Inspector/GameObjectInspector.cs:1155)
-UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Inspector/GameObjectInspector.cs:1169)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int) (at /Users/bokken/build/output/unity/unity/Editor/Mono/AssetPreviewUpdater.cs:43)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string) (at /Users/bokken/build/output/unity/unity/Editor/Mono/AssetPreviewUpdater.cs:11)
-
-[/Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs line 37]
-
- -> (artifact id: 'd0d33eca4af0f668f017d670e6de8e12') in 0.110915 seconds
+ -> (artifact id: 'da6fba59691d9248ef5309dd2ecde914') in 0.010747 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 28
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000086 seconds.
-  path: Assets/Enemy_Env/Enemy_Boss1.prefab
-  artifactKey: Guid(c81a75079457c4b7f851ddafc9873d21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemy_Env/Enemy_Boss1.prefab using Guid(c81a75079457c4b7f851ddafc9873d21) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Textures/Tile_06.png
+  artifactKey: Guid(8b59cbc7da53542e8aa66c3664d5e897) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tile_06.png using Guid(8b59cbc7da53542e8aa66c3664d5e897) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-State comes from an incompatible keyword space
-Expected: From shader: 'Hidden/Universal/CoreBlit' Keyword count: 9 Keywords: STEREO_INSTANCING_ON UNITY_SINGLE_PASS_STEREO STEREO_MULTIVIEW_ON STEREO_CUBEMAP_RENDER_ON DISABLE_TEXTURE2D_X_ARRAY BLIT_SINGLE_SLICE BLIT_DECODE_HDR _LINEAR_TO_SRGB_CONVERSION DEBUG_DISPLAY
-Actual: From shader: 'Hidden/InternalErrorShader' Keyword count: 7 Keywords: STEREO_INSTANCING_ON UNITY_SINGLE_PASS_STEREO STEREO_MULTIVIEW_ON STEREO_CUBEMAP_RENDER_ON FOG_LINEAR FOG_EXP FOG_EXP2
- #0 GetStacktrace(int)
- #1 DebugStringToFile(DebugStringToFileData const&)
- #2 AssertImplementation(int, char const*, int, int, char const*)
- #3 keywords::LocalKeywordState::ValidateSpace(keywords::LocalSpace const*) const
- #4 Material::ResetKeywords(keywords::LocalKeywordState const&)
- #5 MaterialScripting::SetEnabledKeywords(Material*, core::vector<LocalKeywordInfo, 0ul> const&)
- #6 Material_CUSTOM_SetEnabledKeywords(ScriptingBackendNativeObjectPtrOpaque*, ScriptingBackendNativeArrayPtrOpaque*)
- #7  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Material:SetEnabledKeywords (UnityEngine.Material,UnityEngine.Rendering.LocalKeyword[])
- #8  (Mono JIT Code) [ScriptableRenderer.cs:1508] UnityEngine.Rendering.Universal.ScriptableRenderer:ExecuteRenderPass (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.ScriptableRenderPass,UnityEngine.Rendering.Universal.RenderingData&)
- #9  (Mono JIT Code) [ScriptableRenderer.cs:1460] UnityEngine.Rendering.Universal.ScriptableRenderer:ExecuteBlock (int,UnityEngine.Rendering.Universal.ScriptableRenderer/RenderBlocks&,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.RenderingData&,bool)
- #10  (Mono JIT Code) [ScriptableRenderer.cs:1249] UnityEngine.Rendering.Universal.ScriptableRenderer:Execute (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.RenderingData&)
- #11  (Mono JIT Code) [UniversalRenderPipeline.cs:692] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData&)
- #12  (Mono JIT Code) [UniversalRenderPipeline.cs:576] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera,UnityEngine.Rendering.Universal.UniversalAdditionalCameraData&)
- #13  (Mono JIT Code) [UniversalRenderPipeline.cs:559] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera)
- #14  (Mono JIT Code) [UniversalRenderPipeline.cs:386] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
- #15  (Mono JIT Code) [RenderPipeline.cs:53] UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
- #16  (Mono JIT Code) [RenderPipelineManager.cs:132] UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,UnityEngine.Object,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
- #17  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
- #18 mono_jit_runtime_invoke
- #19 do_runtime_invoke
- #20 mono_runtime_invoke
- #21 scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool)
- #22 ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool)
- #23 ScriptableRenderContext::ExtractAndExecuteRenderPipeline(core::vector<Camera*, 0ul> const&, void (*)(SceneNode const*, AABB const*, IndexList&, SceneCullingParameters const*), void*, ScriptingObjectPtr)
- #24 Camera::CustomRenderWithPipeline(ShaderPassContext&, Camera::RenderFlag, void (*)(SceneNode const*, AABB const*, IndexList&, SceneCullingParameters const*), void*, ScriptingObjectPtr)
- #25 Camera::StandaloneCustomRender(Camera::RenderFlag, Shader*, core::basic_string<char, core::StringStorageDefault<char> > const&, Camera::PerformRenderFunction*, ScriptingObjectPtr)
- #26 CameraScripting::Render(Camera*)
- #27 Camera_CUSTOM_Render(ScriptingBackendNativeObjectPtrOpaque*)
- #28  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
-
-State comes from an incompatible keyword space
-Expected: From shader: 'Hidden/InternalErrorShader' Keyword count: 7 Keywords: STEREO_INSTANCING_ON UNITY_SINGLE_PASS_STEREO STEREO_MULTIVIEW_ON STEREO_CUBEMAP_RENDER_ON FOG_LINEAR FOG_EXP FOG_EXP2
-Actual: From shader: 'Hidden/Universal/CoreBlit' Keyword count: 9 Keywords: STEREO_INSTANCING_ON UNITY_SINGLE_PASS_STEREO STEREO_MULTIVIEW_ON STEREO_CUBEMAP_RENDER_ON DISABLE_TEXTURE2D_X_ARRAY BLIT_SINGLE_SLICE BLIT_DECODE_HDR _LINEAR_TO_SRGB_CONVERSION DEBUG_DISPLAY
- #0 GetStacktrace(int)
- #1 DebugStringToFile(DebugStringToFileData const&)
- #2 AssertImplementation(int, char const*, int, int, char const*)
- #3 keywords::LocalKeywordState::ValidateSpace(keywords::LocalSpace const*) const
- #4 keywords::LocalKeywordState::Union(keywords::LocalKeywordState const&)
- #5 Shader::ResolveLocalState(keywords::GlobalKeywordState const&, keywords::LocalKeywordState const&) const
- #6 RenderingCommandBuffer::ExecuteCommandBufferWithState(ShaderPassContext&, RenderNodeQueue&, RenderingCommandBufferState*, unsigned int, ComputeQueueType) const
- #7 RenderingCommandBuffer::ExecuteCommandBuffer(ShaderPassContext&, RenderNodeQueue&, unsigned int, core::vector<std::__1::pair<ShaderLab::FastPropertyName, RenderTexture*>, 0ul>*, ComputeQueueType, RenderTexture*) const
- #8 ScriptableRenderContext::ExecuteScriptableRenderLoop()
- #9  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal_Injected (UnityEngine.Rendering.ScriptableRenderContext&)
- #10  (Mono JIT Code) [UniversalRenderPipeline.cs:576] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera,UnityEngine.Rendering.Universal.UniversalAdditionalCameraData&)
- #11  (Mono JIT Code) [UniversalRenderPipeline.cs:559] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera)
- #12  (Mono JIT Code) [UniversalRenderPipeline.cs:386] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
- #13  (Mono JIT Code) [RenderPipeline.cs:53] UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
- #14  (Mono JIT Code) [RenderPipelineManager.cs:132] UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,UnityEngine.Object,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
- #15  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
- #16 mono_jit_runtime_invoke
- #17 do_runtime_invoke
- #18 mono_runtime_invoke
- #19 scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool)
- #20 ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool)
- #21 ScriptableRenderContext::ExtractAndExecuteRenderPipeline(core::vector<Camera*, 0ul> const&, void (*)(SceneNode const*, AABB const*, IndexList&, SceneCullingParameters const*), void*, ScriptingObjectPtr)
- #22 Camera::CustomRenderWithPipeline(ShaderPassContext&, Camera::RenderFlag, void (*)(SceneNode const*, AABB const*, IndexList&, SceneCullingParameters const*), void*, ScriptingObjectPtr)
- #23 Camera::StandaloneCustomRender(Camera::RenderFlag, Shader*, core::basic_string<char, core::StringStorageDefault<char> > const&, Camera::PerformRenderFunction*, ScriptingObjectPtr)
- #24 CameraScripting::Render(Camera*)
- #25 Camera_CUSTOM_Render(ScriptingBackendNativeObjectPtrOpaque*)
- #26  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
-
-Incompatible keyword states
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
-UnityEngine.Rendering.ScriptableRenderContext:Submit () (at /Users/bokken/build/output/unity/unity/Runtime/Export/RenderPipeline/ScriptableRenderContext.cs:117)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData&) (at ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs:705)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera,UnityEngine.Rendering.Universal.UniversalAdditionalCameraData&) (at ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs:575)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs:558)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs:384)
-UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at /Users/bokken/build/output/unity/unity/Runtime/Export/RenderPipeline/RenderPipeline.cs:52)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,UnityEngine.Object,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle) (at /Users/bokken/build/output/unity/unity/Runtime/Export/RenderPipeline/RenderPipelineManager.cs:132)
-UnityEditor.PreviewRenderUtility:Render (bool,bool) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Inspector/PreviewRenderUtility.cs:539)
-UnityEditor.GameObjectInspector:DoRenderPreview (UnityEditor.GameObjectInspector/PreviewData) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Inspector/GameObjectInspector.cs:1155)
-UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Inspector/GameObjectInspector.cs:1169)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int) (at /Users/bokken/build/output/unity/unity/Editor/Mono/AssetPreviewUpdater.cs:43)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string) (at /Users/bokken/build/output/unity/unity/Editor/Mono/AssetPreviewUpdater.cs:11)
-
-[/Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs line 37]
-
- -> (artifact id: '7277153d4e9ccc82246980830519f7a1') in 0.020378 seconds
+ -> (artifact id: '43ff147e48edd2c3e8be369bb8ca05ec') in 0.012415 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 35
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000056 seconds.
-  path: Assets/Enemy_Env/Enemy_Boss2.prefab
-  artifactKey: Guid(8ed9dcd6d339b4ad7b71b940bac89d50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemy_Env/Enemy_Boss2.prefab using Guid(8ed9dcd6d339b4ad7b71b940bac89d50) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Textures/ninja-icon-simple-minimal-logo-of-hooded-assassin-isolated-japanese-warrior-idea-of-stealth-vector-modified.png
+  artifactKey: Guid(a41e5ba0f646049189e8a9563bd6f891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/ninja-icon-simple-minimal-logo-of-hooded-assassin-isolated-japanese-warrior-idea-of-stealth-vector-modified.png using Guid(a41e5ba0f646049189e8a9563bd6f891) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-State comes from an incompatible keyword space
-Expected: From shader: 'Hidden/Universal/CoreBlit' Keyword count: 9 Keywords: STEREO_INSTANCING_ON UNITY_SINGLE_PASS_STEREO STEREO_MULTIVIEW_ON STEREO_CUBEMAP_RENDER_ON DISABLE_TEXTURE2D_X_ARRAY BLIT_SINGLE_SLICE BLIT_DECODE_HDR _LINEAR_TO_SRGB_CONVERSION DEBUG_DISPLAY
-Actual: From shader: 'Hidden/InternalErrorShader' Keyword count: 7 Keywords: STEREO_INSTANCING_ON UNITY_SINGLE_PASS_STEREO STEREO_MULTIVIEW_ON STEREO_CUBEMAP_RENDER_ON FOG_LINEAR FOG_EXP FOG_EXP2
- #0 GetStacktrace(int)
- #1 DebugStringToFile(DebugStringToFileData const&)
- #2 AssertImplementation(int, char const*, int, int, char const*)
- #3 keywords::LocalKeywordState::ValidateSpace(keywords::LocalSpace const*) const
- #4 Material::ResetKeywords(keywords::LocalKeywordState const&)
- #5 MaterialScripting::SetEnabledKeywords(Material*, core::vector<LocalKeywordInfo, 0ul> const&)
- #6 Material_CUSTOM_SetEnabledKeywords(ScriptingBackendNativeObjectPtrOpaque*, ScriptingBackendNativeArrayPtrOpaque*)
- #7  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Material:SetEnabledKeywords (UnityEngine.Material,UnityEngine.Rendering.LocalKeyword[])
- #8  (Mono JIT Code) [ScriptableRenderer.cs:1508] UnityEngine.Rendering.Universal.ScriptableRenderer:ExecuteRenderPass (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.ScriptableRenderPass,UnityEngine.Rendering.Universal.RenderingData&)
- #9  (Mono JIT Code) [ScriptableRenderer.cs:1460] UnityEngine.Rendering.Universal.ScriptableRenderer:ExecuteBlock (int,UnityEngine.Rendering.Universal.ScriptableRenderer/RenderBlocks&,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.RenderingData&,bool)
- #10  (Mono JIT Code) [ScriptableRenderer.cs:1249] UnityEngine.Rendering.Universal.ScriptableRenderer:Execute (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.RenderingData&)
- #11  (Mono JIT Code) [UniversalRenderPipeline.cs:692] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData&)
- #12  (Mono JIT Code) [UniversalRenderPipeline.cs:576] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera,UnityEngine.Rendering.Universal.UniversalAdditionalCameraData&)
- #13  (Mono JIT Code) [UniversalRenderPipeline.cs:559] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera)
- #14  (Mono JIT Code) [UniversalRenderPipeline.cs:386] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
- #15  (Mono JIT Code) [RenderPipeline.cs:53] UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
- #16  (Mono JIT Code) [RenderPipelineManager.cs:132] UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,UnityEngine.Object,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
- #17  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
- #18 mono_jit_runtime_invoke
- #19 do_runtime_invoke
- #20 mono_runtime_invoke
- #21 scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool)
- #22 ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool)
- #23 ScriptableRenderContext::ExtractAndExecuteRenderPipeline(core::vector<Camera*, 0ul> const&, void (*)(SceneNode const*, AABB const*, IndexList&, SceneCullingParameters const*), void*, ScriptingObjectPtr)
- #24 Camera::CustomRenderWithPipeline(ShaderPassContext&, Camera::RenderFlag, void (*)(SceneNode const*, AABB const*, IndexList&, SceneCullingParameters const*), void*, ScriptingObjectPtr)
- #25 Camera::StandaloneCustomRender(Camera::RenderFlag, Shader*, core::basic_string<char, core::StringStorageDefault<char> > const&, Camera::PerformRenderFunction*, ScriptingObjectPtr)
- #26 CameraScripting::Render(Camera*)
- #27 Camera_CUSTOM_Render(ScriptingBackendNativeObjectPtrOpaque*)
- #28  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
-
-State comes from an incompatible keyword space
-Expected: From shader: 'Hidden/InternalErrorShader' Keyword count: 7 Keywords: STEREO_INSTANCING_ON UNITY_SINGLE_PASS_STEREO STEREO_MULTIVIEW_ON STEREO_CUBEMAP_RENDER_ON FOG_LINEAR FOG_EXP FOG_EXP2
-Actual: From shader: 'Hidden/Universal/CoreBlit' Keyword count: 9 Keywords: STEREO_INSTANCING_ON UNITY_SINGLE_PASS_STEREO STEREO_MULTIVIEW_ON STEREO_CUBEMAP_RENDER_ON DISABLE_TEXTURE2D_X_ARRAY BLIT_SINGLE_SLICE BLIT_DECODE_HDR _LINEAR_TO_SRGB_CONVERSION DEBUG_DISPLAY
- #0 GetStacktrace(int)
- #1 DebugStringToFile(DebugStringToFileData const&)
- #2 AssertImplementation(int, char const*, int, int, char const*)
- #3 keywords::LocalKeywordState::ValidateSpace(keywords::LocalSpace const*) const
- #4 keywords::LocalKeywordState::Union(keywords::LocalKeywordState const&)
- #5 Shader::ResolveLocalState(keywords::GlobalKeywordState const&, keywords::LocalKeywordState const&) const
- #6 RenderingCommandBuffer::ExecuteCommandBufferWithState(ShaderPassContext&, RenderNodeQueue&, RenderingCommandBufferState*, unsigned int, ComputeQueueType) const
- #7 RenderingCommandBuffer::ExecuteCommandBuffer(ShaderPassContext&, RenderNodeQueue&, unsigned int, core::vector<std::__1::pair<ShaderLab::FastPropertyName, RenderTexture*>, 0ul>*, ComputeQueueType, RenderTexture*) const
- #8 ScriptableRenderContext::ExecuteScriptableRenderLoop()
- #9  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal_Injected (UnityEngine.Rendering.ScriptableRenderContext&)
- #10  (Mono JIT Code) [UniversalRenderPipeline.cs:576] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera,UnityEngine.Rendering.Universal.UniversalAdditionalCameraData&)
- #11  (Mono JIT Code) [UniversalRenderPipeline.cs:559] UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera)
- #12  (Mono JIT Code) [UniversalRenderPipeline.cs:386] UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
- #13  (Mono JIT Code) [RenderPipeline.cs:53] UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
- #14  (Mono JIT Code) [RenderPipelineManager.cs:132] UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,UnityEngine.Object,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
- #15  (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object_intptr_object_AtomicSafetyHandle (object,intptr,intptr,intptr)
- #16 mono_jit_runtime_invoke
- #17 do_runtime_invoke
- #18 mono_runtime_invoke
- #19 scripting_method_invoke(ScriptingMethodPtr, ScriptingObjectPtr, ScriptingArguments&, ScriptingExceptionPtr*, bool)
- #20 ScriptingInvocation::Invoke(ScriptingExceptionPtr*, bool)
- #21 ScriptableRenderContext::ExtractAndExecuteRenderPipeline(core::vector<Camera*, 0ul> const&, void (*)(SceneNode const*, AABB const*, IndexList&, SceneCullingParameters const*), void*, ScriptingObjectPtr)
- #22 Camera::CustomRenderWithPipeline(ShaderPassContext&, Camera::RenderFlag, void (*)(SceneNode const*, AABB const*, IndexList&, SceneCullingParameters const*), void*, ScriptingObjectPtr)
- #23 Camera::StandaloneCustomRender(Camera::RenderFlag, Shader*, core::basic_string<char, core::StringStorageDefault<char> > const&, Camera::PerformRenderFunction*, ScriptingObjectPtr)
- #24 CameraScripting::Render(Camera*)
- #25 Camera_CUSTOM_Render(ScriptingBackendNativeObjectPtrOpaque*)
- #26  (Mono JIT Code) (wrapper managed-to-native) UnityEngine.Camera:Render (UnityEngine.Camera)
-
-Incompatible keyword states
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
-UnityEngine.Rendering.ScriptableRenderContext:Submit () (at /Users/bokken/build/output/unity/unity/Runtime/Export/RenderPipeline/ScriptableRenderContext.cs:117)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData&) (at ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs:705)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera,UnityEngine.Rendering.Universal.UniversalAdditionalCameraData&) (at ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs:575)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs:558)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at ./Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs:384)
-UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at /Users/bokken/build/output/unity/unity/Runtime/Export/RenderPipeline/RenderPipeline.cs:52)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,UnityEngine.Object,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle) (at /Users/bokken/build/output/unity/unity/Runtime/Export/RenderPipeline/RenderPipelineManager.cs:132)
-UnityEditor.PreviewRenderUtility:Render (bool,bool) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Inspector/PreviewRenderUtility.cs:539)
-UnityEditor.GameObjectInspector:DoRenderPreview (UnityEditor.GameObjectInspector/PreviewData) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Inspector/GameObjectInspector.cs:1155)
-UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int) (at /Users/bokken/build/output/unity/unity/Editor/Mono/Inspector/GameObjectInspector.cs:1169)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int) (at /Users/bokken/build/output/unity/unity/Editor/Mono/AssetPreviewUpdater.cs:43)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string) (at /Users/bokken/build/output/unity/unity/Editor/Mono/AssetPreviewUpdater.cs:11)
-
-[/Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs line 37]
-
- -> (artifact id: 'ccc7827e4bb6126a7fa869a419376d43') in 0.012563 seconds
+ -> (artifact id: '2ae0c15a74379673909576a4f59ab309') in 0.022023 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 38
+Number of asset objects unloaded after import = 3
 ========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  2.442 seconds
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.959 seconds
-Domain Reload Profiling: 3408ms
-	BeginReloadAssembly (1583ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (1130ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (189ms)
-	RebuildCommonClasses (59ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (38ms)
-	LoadAllAssembliesAndSetupDomain (750ms)
-		LoadAssemblies (644ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (297ms)
-			TypeCache.Refresh (241ms)
-				TypeCache.ScanAssembly (178ms)
-			ScanForSourceGeneratedMonoScriptInfo (39ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (959ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (668ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (28ms)
-			SetLoadedEditorAssemblies (6ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (73ms)
-			ProcessInitializeOnLoadAttributes (480ms)
-			ProcessInitializeOnLoadMethodAttributes (80ms)
-			AfterProcessingInitializeOnLoad (1ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (17ms)
-Refreshing native plugins compatible for Editor in 3.12 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5524 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 22 unused Assets / (67.3 KB). Loaded Objects now: 6216.
-Memory consumption went from 315.9 MB to 315.8 MB.
-Total: 5.074860 ms (FindLiveObjects: 0.556438 ms CreateObjectMapping: 0.604132 ms MarkObjects: 3.784420 ms  DeleteObjects: 0.128854 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
-  custom:framework-osx-AVFoundation: b23960f63f64bdc6ff669e2cdcee2391 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 7.63 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 3 unused Assets / (42.7 KB). Loaded Objects now: 6216.
-Memory consumption went from 230.3 MB to 230.2 MB.
-Total: 31.178607 ms (FindLiveObjects: 0.729793 ms CreateObjectMapping: 0.427688 ms MarkObjects: 29.864464 ms  DeleteObjects: 0.154877 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
-  custom:framework-osx-AVFoundation: b23960f63f64bdc6ff669e2cdcee2391 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Textures/Health_Textu.png
+  artifactKey: Guid(50381a454e45b4eff92fce670cdda55f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Health_Textu.png using Guid(50381a454e45b4eff92fce670cdda55f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '4e5af7537546d83c465aafedf487def3') in 0.011407 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 89, details: Operation aborted.
+AssetImportWorker is now disconnected from the server
+Process exiting

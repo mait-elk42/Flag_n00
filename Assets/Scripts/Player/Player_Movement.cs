@@ -21,12 +21,7 @@ public class Player_Movement : MonoBehaviour
 	[SerializeField]
 	private	GameObject	Loser_Panel;
 	[SerializeField]
-	private	RectTransform	rt;
-	[SerializeField]
 	private	TextMeshProUGUI	score_go;
-	private Vector3[]			mpoints = new Vector3[3];
-	private int					ms_points_index;
-	private Vector3				ms_dest;
 
 	private bool				show_panel;
 
@@ -51,11 +46,6 @@ public class Player_Movement : MonoBehaviour
 		score = 0;
 		health_value = 100;
 		player_still_alive = true;
-		ms_points_index = 0;
-		mpoints[0] = rt.transform.position;
-		mpoints[1] = rt.transform.position + Vector3.down * 150;
-		mpoints[2] = rt.transform.position + Vector3.down * 300;
-		ms_dest = rt.transform.position;
 		Loser_Panel.SetActive(false);
 		pause_panel.SetActive(false);
 	}
@@ -97,41 +87,6 @@ public class Player_Movement : MonoBehaviour
 			return ;
 		if (player_still_alive == false)
 		{
-			if (Input.GetKeyDown(KeyCode.Return))
-			{
-				if (ms_points_index == 0)
-				{
-					Game_Gloabl_Data.Set_High_Score(score);
-					Game_Gloabl_Data.load_scene(1);
-				}
-				else if (ms_points_index == 1)
-				{
-					Game_Gloabl_Data.Set_High_Score(score);
-					Game_Gloabl_Data.load_scene(0);
-				}
-				else if (ms_points_index == 2)
-				{
-					Game_Gloabl_Data.Set_High_Score(score);
-					Application.Quit();
-				}
-			}
-			if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.UpArrow))
-			{
-				if (Input.GetKeyDown(KeyCode.DownArrow))
-				{
-					ms_points_index++;
-				}
-				if (Input.GetKeyDown(KeyCode.UpArrow))
-				{
-					ms_points_index--;
-				}
-				if (ms_points_index < 0)
-					ms_points_index = 2;
-				if (ms_points_index > 2)
-					ms_points_index = 0;
-				ms_dest = mpoints[ms_points_index];
-			}
-			rt.transform.position = Vector3.Lerp(rt.transform.position, ms_dest, 0.1f);
 			cam.transform.position = new Vector3(0, 0, cam.transform.position.z);
 			Loser_Panel.SetActive(true);
 			score_go.text = ""+score;

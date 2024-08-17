@@ -73,6 +73,7 @@
     <Compile Include="Assets/Scripts/Enemy/Enemies_Manager.cs" />
     <Compile Include="Assets/Scripts/Global/Game_Gloabl_Data.cs" />
     <Compile Include="Assets/Scripts/Player/P_Small.c.cs" />
+    <Compile Include="Assets/Scripts/Menu/MainScene_UIManager.cs" />
     <Compile Include="Assets/Scripts/Cus_Events/OEvents_Catch.cs" />
   </ItemGroup>
   <ItemGroup>
