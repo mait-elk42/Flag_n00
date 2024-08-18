@@ -25,6 +25,10 @@ public class Game_Gloabl_Data
 	public static int			loading_opacity_incv = 1;
 	public static int			player_speed = 1200;
 	public static int			enemy_speed = 700;
+	public static bool			player_alive = true;
+	public static int			player_current_score = 0;
+	public static int			player_health = 0;
+
 
 	public static void	load_scene(int index)
 	{

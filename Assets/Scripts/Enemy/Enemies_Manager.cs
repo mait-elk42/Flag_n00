@@ -20,7 +20,7 @@ public class Enemies_Manager : MonoBehaviour
 	{
 		if (Game_Gloabl_Data.game_started == false)
 			return ;
-		if (Player_Movement.player_still_alive == false)
+		if (Game_Gloabl_Data.player_alive == false)
 			return ;
 		if (delay >= 400)
 		{

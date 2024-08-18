@@ -1638,9 +1638,6 @@ MonoBehaviour:
   cam: {fileID: 824897896}
   scorevalue: {fileID: 37819251}
   health: {fileID: 463688899}
-  Loser_Panel: {fileID: 1684961519}
-  score_go: {fileID: 0}
-  pause_panel: {fileID: 89209459}
   mv_seffect: {fileID: 414756771}
   loose_seff: {fileID: 4508101465639599053, guid: 79d46491119904e088e12ea24b81dadf, type: 3}
 --- !u!61 &471076791
@@ -2779,6 +2776,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb671543242849068f0e1068890bc5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pause_panel: {fileID: 89209459}
+  cam: {fileID: 824897896}
+  Loser_Panel: {fileID: 1684961519}
+  score_go: {fileID: 1415242916}
 --- !u!1 &824897894
 GameObject:
   m_ObjectHideFlags: 0
@@ -3997,7 +3998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1361128480
 MonoBehaviour:
   m_ObjectHideFlags: 0

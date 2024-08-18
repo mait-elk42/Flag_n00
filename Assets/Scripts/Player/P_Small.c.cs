@@ -17,7 +17,7 @@ public class P_Small : MonoBehaviour
 	}
 	void Update()
 	{
-		if (Player_Movement.player_still_alive == false)
+		if (Game_Gloabl_Data.player_alive == false)
 			return ;
 		Vector3 direction = (p_tr.position - transform.position).normalized;
 		var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; 
@@ -34,15 +34,15 @@ public class P_Small : MonoBehaviour
 				Instantiate(seff, transform.position, Quaternion.identity);
 				Player_Movement.cam_shake = true;
 				Instantiate(die_effect, transform.position, Quaternion.identity);
-				Player_Movement.score -= 50;
+				Game_Gloabl_Data.player_current_score -= 50;
 				Destroy(this.gameObject);
 			}
 			else
 			{
-				if (Player_Movement.health_value < 100)
+				if (Game_Gloabl_Data.player_health < 100)
 				{
 					Instantiate(hseff, transform.position, Quaternion.identity);
-					Player_Movement.health_value += 10;
+					Game_Gloabl_Data.player_health += 10;
 				}
 				Instantiate(die_effect, transform.position, Quaternion.identity);
 				Destroy(this.gameObject);
