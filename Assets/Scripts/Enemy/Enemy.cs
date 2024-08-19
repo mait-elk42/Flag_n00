@@ -78,6 +78,7 @@ public class Enemy : MonoBehaviour
 	{
 		if (col.CompareTag("Player"))
 		{
+			Player_Movement.combohit++;
 			touch_player = true;
 		}
 	}

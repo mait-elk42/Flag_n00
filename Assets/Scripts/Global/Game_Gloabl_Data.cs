@@ -27,7 +27,7 @@ public class Game_Gloabl_Data
 	public static int			enemy_speed = 700;
 	public static bool			player_alive = true;
 	public static int			player_current_score = 0;
-	public static int			player_health = 0;
+	public static int			player_health = 100;
 
 
 	public static void	load_scene(int index)
@@ -40,7 +40,7 @@ public class Game_Gloabl_Data
 	public static IEnumerator Wait_Before_Hide_LDNG()
 	{
 		game_started = false;
-		yield return new WaitForSeconds(5);
+		yield return new WaitForSeconds(1);
 		show = false;
 		game_started = true;
 	}
@@ -61,7 +61,6 @@ public class Game_Gloabl_Data
 		Dictionary<string, fsData> p2 = ranks[1].AsDictionary;
 		Dictionary<string, fsData> p3 = ranks[2].AsDictionary;
 
-// handle the name too :)
 		if (p1["mscore"].AsInt64 < new_score)
 		{
 			all.AsList[0].AsDictionary["uname"] = new fsData(Get_Uname());

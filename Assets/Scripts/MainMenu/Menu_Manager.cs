@@ -27,7 +27,6 @@ public class Menu_Manager : MonoBehaviour
 	private GameObject	my_hs;
 	void Awake()
 	{
-		// PlayerPrefs.SetInt("_score", 0);
 		if (Game_Gloabl_Data.can_switch)
 			StartCoroutine(Game_Gloabl_Data.Wait_Before_Hide_LDNG());
 		else
@@ -101,7 +100,6 @@ public class Menu_Manager : MonoBehaviour
 	}
 	public void save_uname(TextMeshProUGUI t)
 	{
-		print(">> [" + t.text + "]:" + t.text.Length);
 		if (t.text.Length <= 1)
 			return ;
 		Uname_panel.SetActive(false);

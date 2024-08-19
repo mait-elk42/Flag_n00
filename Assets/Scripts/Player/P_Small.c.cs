@@ -39,11 +39,11 @@ public class P_Small : MonoBehaviour
 			}
 			else
 			{
+				Instantiate(hseff, transform.position, Quaternion.identity);
 				if (Game_Gloabl_Data.player_health < 100)
-				{
-					Instantiate(hseff, transform.position, Quaternion.identity);
 					Game_Gloabl_Data.player_health += 10;
-				}
+				else
+					Game_Gloabl_Data.player_current_score += 500;
 				Instantiate(die_effect, transform.position, Quaternion.identity);
 				Destroy(this.gameObject);
 			}
