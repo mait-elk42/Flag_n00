@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,8 +23,8 @@ public class Player_Movement : MonoBehaviour
 	public static int combohit = 0;
 
 
-	[SerializeField]
-	private TextMeshProUGUI combohittext;
+	[SerializeField] private GameObject	comboprefab;
+	[SerializeField] private Transform	combopos;
 
 	/*
 	*			GLOW 
@@ -38,6 +39,7 @@ public class Player_Movement : MonoBehaviour
 		Game_Gloabl_Data.player_alive = true;
 		cam = Camera.main;
 		loose_seff = transform.GetChild(1).GetComponent<AudioSource>();
+		new ComboEffect().MakeCombo(combohit, combopos.position, comboprefab);
 	}
 	void Start()
 	{
@@ -72,9 +74,7 @@ public class Player_Movement : MonoBehaviour
 		{
 			walking = false;
 			if (combohit > 0)
-			{
-				combohittext.text = "" + combohit;
-			}
+				new ComboEffect().MakeCombo(combohit, combopos.position, comboprefab);
 			combohit = 0;
 		}
 		else

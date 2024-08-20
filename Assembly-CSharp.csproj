@@ -68,6 +68,7 @@
     <Compile Include="Assets/Scripts/MainMenu/Menu_Manager.cs" />
     <Compile Include="Assets/Scripts/MainMenu/Loading.cs" />
     <Compile Include="Assets/Scripts/Enemy/Enemy.cs" />
+    <Compile Include="Assets/Scripts/Player/ComboEffect.cs" />
     <Compile Include="Assets/Scripts/Enemy/Seff_Dest.cs" />
     <Compile Include="Assets/Scripts/Player/Player_Movement.cs" />
     <Compile Include="Assets/Scripts/Enemy/Enemies_Manager.cs" />

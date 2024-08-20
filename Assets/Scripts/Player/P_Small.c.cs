@@ -29,6 +29,7 @@ public class P_Small : MonoBehaviour
 	{
 		if (col.CompareTag("Player"))
 		{
+			Player_Movement.combohit = 0;
 			if (Player_Movement.walking == true)
 			{
 				Instantiate(seff, transform.position, Quaternion.identity);
