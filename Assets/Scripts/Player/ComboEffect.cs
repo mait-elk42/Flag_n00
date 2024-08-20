@@ -5,29 +5,20 @@ using UnityEngine;
 
 public class ComboEffect : MonoBehaviour
 {
-	public static TextMeshPro	pub_instance;
-	public static bool			alive = false;
 	private static int			comboval;
 	private float				scale;
 	private float				tadd;
 	private TextMeshPro			tmpro;
-	private  int				finish;
 	public void MakeCombo(int comboval, Vector3 initpos, GameObject	prefab)
 	{
 		ComboEffect.comboval = comboval;
-		if (alive == false)
-		{
-			pub_instance = Instantiate(prefab, initpos, Quaternion.identity).GetComponent<TextMeshPro>();
-		}
+		Instantiate(prefab, initpos, Quaternion.identity).GetComponent<TextMeshPro>();
 	}
 	void Awake()
 	{
-		alive = true;
 		tadd = 0;
 		scale = 0.05f;
 		tmpro = GetComponent<TextMeshPro>();
-		// FIX COMBO COUNTER DOES NOT WORK :)
-		pub_instance = gameObject.GetComponent<TextMeshPro>();
 	}
 	void Update()
 	{
@@ -36,23 +27,19 @@ public class ComboEffect : MonoBehaviour
 		// 	// Destroy(gameObject);
 		// 	return ;
 		// }
-		if (scale > 2.0f)
+		if (scale > 1.5f)
 		{
-			tadd = -1;
-			finish++;
+			tadd = -3;
+			Destroy(gameObject);
 		}
 		if (scale < 0.1f)
-		{
-			tadd = 1;
-			finish++;
-		}
+			tadd = 3;
 		tmpro.text = "x" + comboval;
 		scale += Time.deltaTime * tadd;
 		tmpro.transform.localScale = new Vector3(scale, scale, 1f);
 	}
 	void OnDestroy()
 	{
-		alive = false;
-		pub_instance = null;
+
 	}
 }

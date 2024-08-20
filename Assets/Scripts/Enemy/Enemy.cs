@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
 	private GameObject	p_die_effect;
 	private bool		touch_player;
 	private int			health_damage = 2;
-	private int			score_gift = 50;
+	public static int			score_gift = 50;
 	public Enemy_Type	type = Enemy_Type.NORMAL;
 	[SerializeField]
 	private	GameObject	seff;

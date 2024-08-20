@@ -64,6 +64,7 @@ public class Menu_Manager : MonoBehaviour
 		hs_panel_anim = 0;
 		hs_panel.SetActive(true);
 		hs_panel_wait.SetActive(true);
+		return ;
 		TextMeshProUGUI t = hs_panel_wait.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
 		t.text = "Wait...";
 		t.color = Color.white;

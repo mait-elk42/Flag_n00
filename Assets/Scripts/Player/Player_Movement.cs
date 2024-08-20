@@ -1,6 +1,8 @@
 using System.Collections;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class Player_Movement : MonoBehaviour
@@ -24,7 +26,6 @@ public class Player_Movement : MonoBehaviour
 
 
 	[SerializeField] private GameObject	comboprefab;
-	[SerializeField] private Transform	combopos;
 
 	/*
 	*			GLOW 
@@ -39,7 +40,6 @@ public class Player_Movement : MonoBehaviour
 		Game_Gloabl_Data.player_alive = true;
 		cam = Camera.main;
 		loose_seff = transform.GetChild(1).GetComponent<AudioSource>();
-		new ComboEffect().MakeCombo(combohit, combopos.position, comboprefab);
 	}
 	void Start()
 	{
@@ -72,9 +72,12 @@ public class Player_Movement : MonoBehaviour
 		transform.position = Vector3.Lerp(transform.position , pos, 0.01f * Time.deltaTime * Game_Gloabl_Data.player_speed);
 		if (Vector3.Distance(transform.position, pos) < 0.5)
 		{
+			if (combohit > 1)
+			{
+				new ComboEffect().MakeCombo(combohit, transform.position, comboprefab);
+				Game_Gloabl_Data.player_current_score += combohit * Enemy.score_gift;
+			}
 			walking = false;
-			if (combohit > 0)
-				new ComboEffect().MakeCombo(combohit, combopos.position, comboprefab);
 			combohit = 0;
 		}
 		else
