@@ -20,15 +20,12 @@ public class Enemies_Manager : MonoBehaviour
 	{
 		if (Game_Gloabl_Data.game_started == false)
 			return ;
-		if (Player_Movement.player_still_alive == false)
-			return ;
 		if (delay >= 400)
 		{
-			int r = Random.Range(0, 999) % (transform.childCount - 1);
-			if (Random.Range(0, 100) > 20)
+			if (Random.Range(0, 10) > 3)
 			{
+				int r = Random.Range(0, 999) % (transform.childCount - 1);
 				int eni = Random.Range(0, enemies_models.Length) % enemies_models.Length;
-				print("en : "+eni);
 				GameObject e = Instantiate(enemies_models[eni], positions[r].position, Quaternion.identity);
 				e.GetComponent<Enemy>().type = (Enemy_Type)eni;
 				if (eni != 0)
@@ -38,7 +35,7 @@ public class Enemies_Manager : MonoBehaviour
 			}
 			else
 			{
-				GameObject e = Instantiate(psmall_model, positions[r].position, Quaternion.identity);
+				GameObject e = Instantiate(psmall_model, positions[0].position, Quaternion.identity);
 				e.transform.localScale = Vector3.one * Random.Range(1.0f, 1.5f);
 			}
 			delay = 0;

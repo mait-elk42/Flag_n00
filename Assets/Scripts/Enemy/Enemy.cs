@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
 	private GameObject	p_die_effect;
 	private bool		touch_player;
 	private int			health_damage = 2;
-	private int			score_gift = 50;
+	public static int			score_gift = 50;
 	public Enemy_Type	type = Enemy_Type.NORMAL;
 	[SerializeField]
 	private	GameObject	seff;
@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
 	{
 		if (Game_Gloabl_Data.game_started == false)
 			return ;
-		if (Player_Movement.player_still_alive == false)
+		if (Game_Gloabl_Data.player_alive == false)
 			return ;
 		if (!touch_player)
 		{
@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour
 				Game_Gloabl_Data.player_speed += 5;
 				Player_Movement.cam_shake = true;
 				Instantiate(die_effect, transform.position, Quaternion.identity);
-				Player_Movement.score += score_gift;
+				Game_Gloabl_Data.player_current_score += score_gift;
 				Destroy(this.gameObject);
 			}
 			else
@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour
 				Instantiate(seff, transform.position, Quaternion.identity);
 				Player_Movement.cam_shake = true;
 				Instantiate(p_die_effect, p_tr.transform.position, Quaternion.identity);
-				Player_Movement.health_value -= health_damage;
+				Game_Gloabl_Data.player_health -= health_damage;
 				Destroy(this.gameObject);
 			}
 		}
@@ -78,6 +78,7 @@ public class Enemy : MonoBehaviour
 	{
 		if (col.CompareTag("Player"))
 		{
+			Player_Movement.combohit++;
 			touch_player = true;
 		}
 	}

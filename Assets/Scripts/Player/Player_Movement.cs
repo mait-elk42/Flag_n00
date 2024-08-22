@@ -1,11 +1,13 @@
+using System.Collections;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class Player_Movement : MonoBehaviour
 {
-	[SerializeField]
-	Camera						cam;
+	private Camera				cam;
 	private Vector2				pos;
 	public static bool			walking;
 	[SerializeField]
@@ -13,133 +15,49 @@ public class Player_Movement : MonoBehaviour
 	private float				angle;
 	[SerializeField]
 	private TextMeshProUGUI		scorevalue;
-	public static int			score;
-	public static int			health_value;
-	public static bool			player_still_alive;
 	[SerializeField]
 	private Slider				health;
-	[SerializeField]
-	private	GameObject			Loser_Panel;
-	[SerializeField]
-	private	RectTransform		rt;
-	[SerializeField]
-	private	TextMeshProUGUI		score_go;
-	private Vector3[]			mpoints = new Vector3[3];
-	private int					ms_points_index;
-	private Vector3				ms_dest;
-	private bool				show_panel;
-	[SerializeField]
-	private GameObject			pause_panel;
+
 	[SerializeField]
 	private AudioSource	mv_seffect;
+	private	AudioSource	loose_seff;
 
-	[SerializeField]
-	private	GameObject	loose_seff;
+	public static int combohit = 0;
+
+
+	[SerializeField] private GameObject	comboprefab;
 
 	/*
-	*			REISZE THE PLAYER 
-	*			SCORE++ == SLOW INCR
-	*			ENEMIES DIFF SIZE
 	*			GLOW 
 	*			COMBO
 	*/
 	
 	void Awake()
 	{
+		Application.targetFrameRate = 60;
 		pos = transform.position;
-		score = 0;
-		health_value = 100;
-		player_still_alive = true;
-		ms_points_index = 0;
-		mpoints[0] = rt.transform.position;
-		mpoints[1] = rt.transform.position + Vector3.down * 150;
-		mpoints[2] = rt.transform.position + Vector3.down * 300;
-		ms_dest = rt.transform.position;
-		Loser_Panel.SetActive(false);
-		pause_panel.SetActive(false);
+		Game_Gloabl_Data.player_current_score = 0;
+		Game_Gloabl_Data.player_health = 100;
+		Game_Gloabl_Data.player_alive = true;
+		cam = Camera.main;
+		loose_seff = transform.GetChild(1).GetComponent<AudioSource>();
 	}
 	void Start()
 	{
-		show_panel = false;
 		Game_Gloabl_Data.show = true;
 		StartCoroutine(Game_Gloabl_Data.Wait_Before_Hide_LDNG());
 	}
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Escape) && player_still_alive)
-		{
-			show_panel = show_panel == false;
-			Game_Gloabl_Data.game_started = false;
-		}
-		if (show_panel)
-		{
-			if (Input.GetKeyDown(KeyCode.C))
-			{
-				show_panel = false;
-				Game_Gloabl_Data.game_started = true;
-			}
-			if (Input.GetKeyDown(KeyCode.E))
-			{
-				Game_Gloabl_Data.Set_High_Score(score);
-				Game_Gloabl_Data.load_scene(0);
-			}
-			if (Input.GetKeyDown(KeyCode.Q))
-			{
-				Game_Gloabl_Data.Set_High_Score(score);
-				Application.Quit();
-			}
-			pause_panel.SetActive(show_panel);
-			return ;
-		}
+		if (Input.GetKeyDown(KeyCode.W))
+			Game_Gloabl_Data.player_health -= 20;
 		if (Game_Gloabl_Data.game_started == false)
 			return ;
-		if (player_still_alive == false)
-		{
-			if (Input.GetKeyDown(KeyCode.Return))
-			{
-				if (ms_points_index == 0)
-				{
-					Game_Gloabl_Data.Set_High_Score(score);
-					Game_Gloabl_Data.load_scene(1);
-				}
-				else if (ms_points_index == 1)
-				{
-					Game_Gloabl_Data.Set_High_Score(score);
-					Game_Gloabl_Data.load_scene(0);
-				}
-				else if (ms_points_index == 2)
-				{
-					Game_Gloabl_Data.Set_High_Score(score);
-					Application.Quit();
-				}
-			}
-			if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.UpArrow))
-			{
-				if (Input.GetKeyDown(KeyCode.DownArrow))
-				{
-					ms_points_index++;
-				}
-				if (Input.GetKeyDown(KeyCode.UpArrow))
-				{
-					ms_points_index--;
-				}
-				if (ms_points_index < 0)
-					ms_points_index = 2;
-				if (ms_points_index > 2)
-					ms_points_index = 0;
-				ms_dest = mpoints[ms_points_index];
-			}
-			rt.transform.position = Vector3.Lerp(rt.transform.position, ms_dest, 0.1f);
-			cam.transform.position = new Vector3(0, 0, cam.transform.position.z);
-			Loser_Panel.SetActive(true);
-			score_go.text = ""+score;
-			return ;
-		}
 		if (cam_shake)
 		{
 			cam.transform.position = new Vector3(cam.transform.position.x + (Mathf.Cos(angle) * 0.15f), cam.transform.position.y+ (Mathf.Sin(angle) * 0.15f), cam.transform.position.z);
-			angle += Time.deltaTime * 800f;
+			angle += Time.deltaTime * 600f;
 			if (angle > 360)
 			{
 				angle = 0;
@@ -152,14 +70,26 @@ public class Player_Movement : MonoBehaviour
 			mv_seffect.Play();
 			pos = cam.ScreenToWorldPoint(Input.mousePosition);
 		}
-		transform.position = Vector3.Lerp(transform.position , pos, 0.01f * Time.deltaTime * Game_Gloabl_Data.player_speed);;
-		walking = Vector3.Distance(transform.position, pos) > 0.5;
-		scorevalue.text = ""+score;
-		health.value = health_value;
-		if (health_value <= 0)
+		transform.position = Vector3.Lerp(transform.position , pos, 0.01f * Time.deltaTime * Game_Gloabl_Data.player_speed);
+		if (Vector3.Distance(transform.position, pos) < 0.5)
 		{
-			Instantiate(loose_seff, transform.position, Quaternion.identity);
-			player_still_alive = false;
+			if (combohit > 1)
+			{
+				new ComboEffect().MakeCombo(combohit, transform.position, comboprefab);
+				Game_Gloabl_Data.player_current_score += combohit * Enemy.score_gift;
+			}
+			walking = false;
+			combohit = 0;
+		}
+		else
+			walking = true;
+		scorevalue.text = ""+Game_Gloabl_Data.player_current_score;
+		health.value = Game_Gloabl_Data.player_health;
+		if (Game_Gloabl_Data.player_health <= 0)
+		{
+			loose_seff.Play();
+			Game_Gloabl_Data.player_alive = false;
+			Game_Gloabl_Data.game_started = false;
 			cam_shake = true;
 		}
 	}

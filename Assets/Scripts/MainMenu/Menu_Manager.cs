@@ -27,7 +27,6 @@ public class Menu_Manager : MonoBehaviour
 	private GameObject	my_hs;
 	void Awake()
 	{
-		// PlayerPrefs.SetInt("_score", 0);
 		if (Game_Gloabl_Data.can_switch)
 			StartCoroutine(Game_Gloabl_Data.Wait_Before_Hide_LDNG());
 		else
@@ -61,11 +60,11 @@ public class Menu_Manager : MonoBehaviour
 	}
 	public async void LeaderBoardGame()
 	{
-		return ;
 		load_board_visibility = true;
 		hs_panel_anim = 0;
 		hs_panel.SetActive(true);
 		hs_panel_wait.SetActive(true);
+		return ;
 		TextMeshProUGUI t = hs_panel_wait.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
 		t.text = "Wait...";
 		t.color = Color.white;
@@ -102,7 +101,6 @@ public class Menu_Manager : MonoBehaviour
 	}
 	public void save_uname(TextMeshProUGUI t)
 	{
-		print(">> [" + t.text + "]:" + t.text.Length);
 		if (t.text.Length <= 1)
 			return ;
 		Uname_panel.SetActive(false);
