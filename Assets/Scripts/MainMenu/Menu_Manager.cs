@@ -61,6 +61,7 @@ public class Menu_Manager : MonoBehaviour
 	}
 	public async void LeaderBoardGame()
 	{
+		return ;
 		load_board_visibility = true;
 		hs_panel_anim = 0;
 		hs_panel.SetActive(true);
