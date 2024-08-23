@@ -13,19 +13,17 @@ public class Player_Movement : MonoBehaviour
 	[SerializeField]
 	public static bool			cam_shake;
 	private float				angle;
-	[SerializeField]
-	private TextMeshProUGUI		scorevalue;
-	[SerializeField]
-	private Slider				health;
+	[SerializeField] private TextMeshProUGUI		scorevalue;
+	[SerializeField] private Slider				health;
 
-	[SerializeField]
-	private AudioSource	mv_seffect;
+	[SerializeField] private AudioSource	mv_seffect;
 	private	AudioSource	loose_seff;
 
 	public static int combohit = 0;
-
-
 	[SerializeField] private GameObject	comboprefab;
+
+	[SerializeField] private Sprite[] pframes;
+	private SpriteRenderer sprite;
 
 	/*
 	*			GLOW 
@@ -41,15 +39,30 @@ public class Player_Movement : MonoBehaviour
 		Game_Gloabl_Data.player_alive = true;
 		cam = Camera.main;
 		loose_seff = transform.GetChild(1).GetComponent<AudioSource>();
+		sprite = GetComponent<SpriteRenderer>();
 	}
 	void Start()
 	{
 		Game_Gloabl_Data.show = true;
 		StartCoroutine(Game_Gloabl_Data.Wait_Before_Hide_LDNG());
 	}
-
+	void health_sprite_manage()
+	{
+		int	phealth = Game_Gloabl_Data.player_health;
+		if (phealth >= 0 && phealth < 20)
+			sprite.sprite = pframes[4];
+		if (phealth >= 20 && phealth < 40)
+			sprite.sprite = pframes[3];
+		if (phealth >= 40 && phealth < 60)
+			sprite.sprite = pframes[2];
+		if (phealth >= 60 && phealth < 80)
+			sprite.sprite = pframes[1];
+		if (phealth >= 80 && phealth <= 100)
+			sprite.sprite = pframes[0];
+	}
 	void Update()
 	{
+		health_sprite_manage();
 		if (Input.GetKeyDown(KeyCode.W))
 			Game_Gloabl_Data.player_health -= 20;
 		if (Game_Gloabl_Data.game_started == false)
@@ -65,7 +78,7 @@ public class Player_Movement : MonoBehaviour
 				cam.transform.position = new Vector3(0, 0, cam.transform.position.z);
 			}
 		}
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(0) && !Game_Gloabl_Data.player_freeze)
 		{
 			mv_seffect.Play();
 			pos = cam.ScreenToWorldPoint(Input.mousePosition);

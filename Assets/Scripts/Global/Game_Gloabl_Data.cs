@@ -28,6 +28,7 @@ public class Game_Gloabl_Data
 	public static bool			player_alive = true;
 	public static int			player_current_score = 0;
 	public static int			player_health = 100;
+	public static bool			player_freeze = false;
 
 
 	public static void	load_scene(int index)

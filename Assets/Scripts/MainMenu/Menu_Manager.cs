@@ -102,9 +102,10 @@ public class Menu_Manager : MonoBehaviour
 	public void save_uname(TextMeshProUGUI t)
 	{
 		if (t.text.Length <= 1)
-			return ;
+			PlayerPrefs.SetString("_uname", "Unknown Player");
+		else
+			PlayerPrefs.SetString("_uname", t.text);
 		Uname_panel.SetActive(false);
-		PlayerPrefs.SetString("_uname", t.text);
 		Awake();
 	}
 }

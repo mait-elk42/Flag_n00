@@ -36,15 +36,19 @@ public class P_Small : MonoBehaviour
 				Player_Movement.cam_shake = true;
 				Instantiate(die_effect, transform.position, Quaternion.identity);
 				Game_Gloabl_Data.player_current_score -= 50;
+				Game_Gloabl_Data.player_freeze = true;
 				Destroy(this.gameObject);
 			}
 			else
 			{
 				Instantiate(hseff, transform.position, Quaternion.identity);
-				if (Game_Gloabl_Data.player_health < 100)
-					Game_Gloabl_Data.player_health += 10;
-				else
-					Game_Gloabl_Data.player_current_score += 500;
+				if (Game_Gloabl_Data.player_freeze == false)
+				{
+					if (Game_Gloabl_Data.player_health < 100)
+						Game_Gloabl_Data.player_health += 10;
+					else
+						Game_Gloabl_Data.player_current_score += 500;
+				}
 				Instantiate(die_effect, transform.position, Quaternion.identity);
 				Destroy(this.gameObject);
 			}
